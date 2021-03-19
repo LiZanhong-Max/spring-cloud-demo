@@ -1,0 +1,26 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: ppt-invoke
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lzh:123456@127.0.0.1:8761/eureka/,http://lzh:123456@127.0.0.1:8762/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+feign:
+  circuitbreaker:
+    enabled: true
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+PPT-SERVICE:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.zztr.pptinvoke.rule.MyRule

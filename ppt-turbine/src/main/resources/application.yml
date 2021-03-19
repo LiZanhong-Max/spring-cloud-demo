@@ -1,0 +1,19 @@
+server:
+  port: 9020
+
+spring:
+  application:
+    name: ppt-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lzh:123456@127.0.0.1:8761/eureka/,http://lzh:123456@127.0.0.1:8762/eureka/
+
+
+turbine:
+  app-config: PPT-INVOKE
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+  instanceUrlSuffix: /hystrix.stream

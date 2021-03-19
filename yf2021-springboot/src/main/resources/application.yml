@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+
+a:
+  b:
+    c: 100
+    d: 200
+
+spring:
+  profiles:
+    active: prod
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false

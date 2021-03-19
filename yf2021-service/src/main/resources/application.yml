@@ -1,0 +1,16 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: yf2021-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lzh:123456@127.0.0.1:7682/eureka/,http://lzh:123456@127.0.0.1:7683/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}

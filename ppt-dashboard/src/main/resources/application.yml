@@ -1,0 +1,10 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: ppt-dashboard
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"

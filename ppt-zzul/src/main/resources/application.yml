@@ -1,0 +1,19 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: ppt-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lzh:123456@127.0.0.1:8761/eureka/,http://lzh:123456@127.0.0.1:8762/eureka/
+
+zuul:
+  retryable: true
+  PreFilter:
+    pre:
+      disable: true
+
+

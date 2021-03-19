@@ -1,0 +1,18 @@
+server:
+  port: 7681
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7681/yf2021-eureka
+    register-with-eureka: false
+    fetch-registry: false
+
+spring:
+  security:
+    user:
+      name: lzh
+      password: 123456
+
+  profiles:
+    active: master

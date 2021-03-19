@@ -1,0 +1,8 @@
+server:
+  port: 7683
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7682/eureka
+
