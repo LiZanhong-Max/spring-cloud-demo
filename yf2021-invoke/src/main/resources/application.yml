@@ -14,3 +14,7 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+
+YF2021-SERVICE:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.zztr.yf2021invoke.controller.utils.MyRule
